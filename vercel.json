@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@vercel/next" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/src/pages-api/api/$1.ts" },
+    { "src": "/(.*)", "dest": "/" }
+  ]
+}
